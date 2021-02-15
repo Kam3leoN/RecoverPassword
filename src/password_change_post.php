@@ -1,6 +1,5 @@
 <?php 
     require_once __DIR__.'/../config/config.php';
-    if(isset($_POST['password']) && isset($_POST['password_repeat']) && isset($_POST['token'])){
         if(!empty($_POST['password']) && !empty($_POST['password_repeat']) && !empty($_POST['token'])){
             $password = htmlspecialchars($_POST['password']);
             $password_repeat = htmlspecialchars($_POST['password_repeat']);
@@ -31,6 +30,3 @@
         }else{
             echo "Merci de renseigner un mot de passe";
         }
-    }else{
-        echo "Merci de renseigner un mot de passe";
-    }
