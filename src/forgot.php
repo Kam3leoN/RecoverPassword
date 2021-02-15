@@ -1,7 +1,7 @@
 <?php 
     require_once __DIR__.'/../config/config.php';
 
-    if(isset($_POST['email']) && !empty($_POST['email'])){
+    if(!empty($_POST['email'])){
         $email = htmlspecialchars($_POST['email']);
 
         $check = $bdd->prepare('SELECT token FROM utilisateurs WHERE email = ?');
