@@ -1,7 +1,7 @@
 <?php 
     require_once __DIR__.'/../config/config.php';
 
-    if(isset($_GET['u']) && isset($_GET['token']) && !empty($_GET['u']) && !empty($_GET['token']) ){
+    if(!empty($_GET['u']) && !empty($_GET['token']) ){
         $u = htmlspecialchars(base64_decode($_GET['u']));
         $token = htmlspecialchars(base64_decode($_GET['token']));
 
