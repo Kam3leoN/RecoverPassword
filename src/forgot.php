@@ -11,7 +11,7 @@
 
         if($row){
             $token = bin2hex(openssl_random_pseudo_bytes(24));
-            $token_user = $data['token'];
+            $token_user = $data['token']; // attention longueur du token : 128, prevoyez un varchar 130 dans votre table si vous utilisez les tokens du système d'inscription
 
             $insert = $bdd->prepare('INSERT INTO password_recover(token_user, token) VALUES(?,?)');
             $insert->execute(array($token_user, $token));
